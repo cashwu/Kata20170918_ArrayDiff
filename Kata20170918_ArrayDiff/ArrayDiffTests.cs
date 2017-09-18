@@ -31,7 +31,8 @@ namespace Kata20170918_ArrayDiff
     {
         public int[] ArrayDiff(int[] a, int[] b)
         {
-            return a.Where(i => !b.Contains(i)).ToArray();
+            return a.Except(b).ToArray();
+            // return a.Where(i => !b.Contains(i)).ToArray();
         }
     }
 }
