@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Kata20170918_ArrayDiff
 {
     [TestClass]
-    public class UnitTest1
+    public class ArrayDiffTests
     {
         [TestMethod]
         public void TestMethod1()
