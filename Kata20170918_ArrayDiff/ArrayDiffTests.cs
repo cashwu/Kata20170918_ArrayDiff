@@ -25,6 +25,12 @@ namespace Kata20170918_ArrayDiff
             ArrayDiffShouldBe(new[] { 1 }, new[] { 1, 2, 2 }, new[] { 2 });
         }
 
+        [TestMethod]
+        public void Input_empty_array_and_array_1_should_return_empty_array()
+        {
+            ArrayDiffShouldBe(new int[] {}, new int[] { }, new[] { 1 });
+        }
+
         private static void ArrayDiffShouldBe(int[] expected, int[] a, int[] b)
         {
             var kata = new Kata();
