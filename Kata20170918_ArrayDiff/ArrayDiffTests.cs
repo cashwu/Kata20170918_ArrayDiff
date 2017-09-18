@@ -31,6 +31,12 @@ namespace Kata20170918_ArrayDiff
             ArrayDiffShouldBe(new int[] {}, new int[] { }, new[] { 1 });
         }
 
+        [TestMethod]
+        public void Input_array_1_2_2_and_array_1_should_return_array_2_2()
+        {
+            ArrayDiffShouldBe(new[] { 2, 2 }, new[] { 1, 2, 2 }, new[] { 1 });
+        }
+
         private static void ArrayDiffShouldBe(int[] expected, int[] a, int[] b)
         {
             var kata = new Kata();
@@ -43,8 +49,7 @@ namespace Kata20170918_ArrayDiff
     {
         public int[] ArrayDiff(int[] a, int[] b)
         {
-            return a.Except(b).ToArray();
-            // return a.Where(i => !b.Contains(i)).ToArray();
+            return a.Where(i => !b.Contains(i)).ToArray();
         }
     }
 }
